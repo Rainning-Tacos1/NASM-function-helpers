@@ -52,7 +52,7 @@
 
 %define V8(n) BYTE [bp-n]
 %define V16(n) WORD [bp-(2*n)]
-%define V8(n, m) BYTE [bp-(2*n)-m]
+%define V8(n, m) BYTE [bp-n-m]
 %define V16(n, m) WORD [bp-(2*n)-m]
 
 %define NL 0xA
@@ -66,4 +66,5 @@
 	%if %0 >= 3
 		db %{3:-1} 
 	%endif 
+
 %endmacro
