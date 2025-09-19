@@ -38,4 +38,9 @@ putc: ; BYTE character
 	EPILOGUE
 	ret
 
-string message, "Hello, world!", CRLF
+
+string message, "Hello, world!", CRLF, 0
+
+; MBR signature
+times 510-($-$$) db 0
+dw 0AA55h
