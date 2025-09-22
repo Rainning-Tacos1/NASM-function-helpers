@@ -71,5 +71,6 @@ foo:
 
 #### String:
 ```asm
-string my_label_for_str, "Hello, world!", CR, LF
+string my_label_for_str, "Hello, world!", CR, LF, 0
+
 ```
